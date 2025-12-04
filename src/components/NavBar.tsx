@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 
 export default function NavbarComponent() {
   return (
@@ -10,9 +11,9 @@ export default function NavbarComponent() {
             <Navbar.Toggle style={{color:'antiquewhite'}} aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse style={{color:'antiquewhite'}} id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link style={{color:'antiquewhite'}} href="/buys">Servicios</Nav.Link>
-              <Nav.Link style={{color:'antiquewhite'}} href="/visits">Lugares para visitar</Nav.Link>
-              <Nav.Link style={{color:'antiquewhite'}} href="/food">Gastronomia</Nav.Link>
+              <Link style={{color:'antiquewhite', textDecoration: 'none', marginLeft: '10px'}} to="/buys">Servicios</Link>
+              <Link style={{color:'antiquewhite', textDecoration: 'none', marginLeft: '10px'}} to="/visits">Lugares para visitar</Link>
+              <Link style={{color:'antiquewhite', textDecoration: 'none', marginLeft: '10px'}} to="/food">Gastronomia</Link>
             </Nav>
             </Navbar.Collapse>
         </Container>
